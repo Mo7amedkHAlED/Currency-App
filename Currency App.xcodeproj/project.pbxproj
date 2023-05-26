@@ -20,6 +20,10 @@
 		7F559D292A2034A000D4E2FE /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F559D252A2034A000D4E2FE /* HomeViewController.xib */; };
 		7F559D2B2A2034C600D4E2FE /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F559D2A2A2034C600D4E2FE /* HomeViewModel.swift */; };
 		7F559D2C2A2034C600D4E2FE /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F559D2A2A2034C600D4E2FE /* HomeViewModel.swift */; };
+		7F836E1A2A20B6C8005AFB91 /* ExtensionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F836E192A20B6C8005AFB91 /* ExtensionUIView.swift */; };
+		7F836E1D2A20B7D9005AFB91 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 7F836E1C2A20B7D9005AFB91 /* RxCocoa */; };
+		7F836E1F2A20B7D9005AFB91 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 7F836E1E2A20B7D9005AFB91 /* RxSwift */; };
+		7F836E212A20B7D9005AFB91 /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 7F836E202A20B7D9005AFB91 /* RxTest */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +58,7 @@
 		7F559D242A2034A000D4E2FE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7F559D252A2034A000D4E2FE /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		7F559D2A2A2034C600D4E2FE /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		7F836E192A20B6C8005AFB91 /* ExtensionUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +66,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F836E1F2A20B7D9005AFB91 /* RxSwift in Frameworks */,
+				7F836E212A20B7D9005AFB91 /* RxTest in Frameworks */,
+				7F836E1D2A20B7D9005AFB91 /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,10 +112,12 @@
 		7F559CE12A202EA000D4E2FE /* Currency App */ = {
 			isa = PBXGroup;
 			children = (
-				7F559D1B2A2033D200D4E2FE /* Presentation */,
-				7F559D182A20338900D4E2FE /* Data */,
 				7F559D122A20319D00D4E2FE /* Application */,
+				7F836E222A20B8F7005AFB91 /* Constnt */,
+				7F559D182A20338900D4E2FE /* Data */,
 				7F559D142A2032EE00D4E2FE /* Domain */,
+				7F836E182A20B636005AFB91 /* Extensions */,
+				7F559D1B2A2033D200D4E2FE /* Presentation */,
 				7F559D132A20322C00D4E2FE /* Resources */,
 			);
 			path = "Currency App";
@@ -245,6 +255,21 @@
 			path = "View Model";
 			sourceTree = "<group>";
 		};
+		7F836E182A20B636005AFB91 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7F836E192A20B6C8005AFB91 /* ExtensionUIView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7F836E222A20B8F7005AFB91 /* Constnt */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constnt;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -261,6 +286,11 @@
 			dependencies = (
 			);
 			name = "Currency App";
+			packageProductDependencies = (
+				7F836E1C2A20B7D9005AFB91 /* RxCocoa */,
+				7F836E1E2A20B7D9005AFB91 /* RxSwift */,
+				7F836E202A20B7D9005AFB91 /* RxTest */,
+			);
 			productName = "Currency App";
 			productReference = 7F559CDF2A202EA000D4E2FE /* Currency App.app */;
 			productType = "com.apple.product-type.application";
@@ -333,6 +363,9 @@
 				Base,
 			);
 			mainGroup = 7F559CD62A202EA000D4E2FE;
+			packageReferences = (
+				7F836E1B2A20B7D9005AFB91 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 7F559CE02A202EA000D4E2FE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -381,6 +414,7 @@
 				7F559CE52A202EA000D4E2FE /* SceneDelegate.swift in Sources */,
 				7F559D262A2034A000D4E2FE /* HomeViewController.swift in Sources */,
 				7F559D2B2A2034C600D4E2FE /* HomeViewModel.swift in Sources */,
+				7F836E1A2A20B6C8005AFB91 /* ExtensionUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -722,6 +756,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7F836E1B2A20B7D9005AFB91 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7F836E1C2A20B7D9005AFB91 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7F836E1B2A20B7D9005AFB91 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		7F836E1E2A20B7D9005AFB91 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7F836E1B2A20B7D9005AFB91 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		7F836E202A20B7D9005AFB91 /* RxTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7F836E1B2A20B7D9005AFB91 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxTest;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7F559CD72A202EA000D4E2FE /* Project object */;
 }
