@@ -6,17 +6,10 @@
 //
 
 import Foundation
-
 // MARK: - Currency
-struct Currency: Codable, Hashable{
-    let date: String
-    let result: Double
-    let query: Query?
+struct Currency: Codable {
+    let success: Bool
+    let timestamp: Int
+    let base, date: String
+    let rates: [String: Float]
 }
-// MARK: - Query
-struct Query: Codable, Hashable {
-    let amount: Double
-    let from:  String
-    let to: String
-}
-
