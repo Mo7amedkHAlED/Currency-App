@@ -12,7 +12,7 @@
 		7F146FE32A2175CE00A1E5B0 /* HomeRepoImple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F146FE22A2175CE00A1E5B0 /* HomeRepoImple.swift */; };
 		7F146FE52A217BE900A1E5B0 /* HomeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F146FE42A217BE900A1E5B0 /* HomeUseCase.swift */; };
 		7F1ABA862A22AB22002E8510 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1ABA852A22AB22002E8510 /* Reachability.swift */; };
-		7F361FA82A24CA5B00F5396B /* LocalDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F361FA72A24CA5B00F5396B /* LocalDataModel.swift */; };
+		7F361FA82A24CA5B00F5396B /* HistoricalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F361FA72A24CA5B00F5396B /* HistoricalModel.swift */; };
 		7F361FB22A24D45A00F5396B /* HistoricalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F361FB02A24D45A00F5396B /* HistoricalViewController.swift */; };
 		7F361FB32A24D45A00F5396B /* HistoricalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F361FB02A24D45A00F5396B /* HistoricalViewController.swift */; };
 		7F361FB42A24D45A00F5396B /* HistoricalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F361FB02A24D45A00F5396B /* HistoricalViewController.swift */; };
@@ -22,6 +22,7 @@
 		7F361FB92A24D98900F5396B /* HistoricalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F361FB82A24D98900F5396B /* HistoricalViewModel.swift */; };
 		7F361FBA2A24D98900F5396B /* HistoricalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F361FB82A24D98900F5396B /* HistoricalViewModel.swift */; };
 		7F361FBB2A24D98900F5396B /* HistoricalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F361FB82A24D98900F5396B /* HistoricalViewModel.swift */; };
+		7F3827D22A2649EA002B34B6 /* ExtentionArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3827D12A2649EA002B34B6 /* ExtentionArray.swift */; };
 		7F559CE32A202EA000D4E2FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F559CE22A202EA000D4E2FE /* AppDelegate.swift */; };
 		7F559CE52A202EA000D4E2FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F559CE42A202EA000D4E2FE /* SceneDelegate.swift */; };
 		7F559CEC2A202EA300D4E2FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F559CEB2A202EA300D4E2FE /* Assets.xcassets */; };
@@ -35,8 +36,13 @@
 		7F559D292A2034A000D4E2FE /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F559D252A2034A000D4E2FE /* HomeViewController.xib */; };
 		7F559D2B2A2034C600D4E2FE /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F559D2A2A2034C600D4E2FE /* HomeViewModel.swift */; };
 		7F559D2C2A2034C600D4E2FE /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F559D2A2A2034C600D4E2FE /* HomeViewModel.swift */; };
+		7F7B04952A255DB800CF548C /* HistoricalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7B04932A255DB800CF548C /* HistoricalCell.swift */; };
+		7F7B04962A255DB800CF548C /* HistoricalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F7B04942A255DB800CF548C /* HistoricalCell.xib */; };
+		7F7B04992A2578AC00CF548C /* HistoricalRepoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7B04982A2578AC00CF548C /* HistoricalRepoProtocol.swift */; };
+		7F7B049C2A25798900CF548C /* HistoricalUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7B049B2A25798900CF548C /* HistoricalUseCase.swift */; };
+		7F7B049E2A257A7600CF548C /* HistoricalRepoImple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7B049D2A257A7600CF548C /* HistoricalRepoImple.swift */; };
 		7F836E1A2A20B6C8005AFB91 /* ExtensionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F836E192A20B6C8005AFB91 /* ExtensionUIView.swift */; };
-		7F836E262A214757005AFB91 /* HomeNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F836E252A214757005AFB91 /* HomeNetwork.swift */; };
+		7F836E262A214757005AFB91 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F836E252A214757005AFB91 /* NetworkService.swift */; };
 		7F836E282A2147FE005AFB91 /* HomeRepoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F836E272A2147FE005AFB91 /* HomeRepoProtocol.swift */; };
 		7F836E2B2A2148F4005AFB91 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F836E2A2A2148F4005AFB91 /* Constants.swift */; };
 		7F836E342A21605C005AFB91 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F836E332A21605C005AFB91 /* Currency.swift */; };
@@ -64,10 +70,11 @@
 		7F146FE22A2175CE00A1E5B0 /* HomeRepoImple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepoImple.swift; sourceTree = "<group>"; };
 		7F146FE42A217BE900A1E5B0 /* HomeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUseCase.swift; sourceTree = "<group>"; };
 		7F1ABA852A22AB22002E8510 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
-		7F361FA72A24CA5B00F5396B /* LocalDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataModel.swift; sourceTree = "<group>"; };
+		7F361FA72A24CA5B00F5396B /* HistoricalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalModel.swift; sourceTree = "<group>"; };
 		7F361FB02A24D45A00F5396B /* HistoricalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalViewController.swift; sourceTree = "<group>"; };
 		7F361FB12A24D45A00F5396B /* HistoricalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoricalViewController.xib; sourceTree = "<group>"; };
 		7F361FB82A24D98900F5396B /* HistoricalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalViewModel.swift; sourceTree = "<group>"; };
+		7F3827D12A2649EA002B34B6 /* ExtentionArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtentionArray.swift; sourceTree = "<group>"; };
 		7F559CDF2A202EA000D4E2FE /* Currency App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Currency App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F559CE22A202EA000D4E2FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F559CE42A202EA000D4E2FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,8 +89,13 @@
 		7F559D242A2034A000D4E2FE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		7F559D252A2034A000D4E2FE /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		7F559D2A2A2034C600D4E2FE /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		7F7B04932A255DB800CF548C /* HistoricalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoricalCell.swift; sourceTree = "<group>"; };
+		7F7B04942A255DB800CF548C /* HistoricalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HistoricalCell.xib; sourceTree = "<group>"; };
+		7F7B04982A2578AC00CF548C /* HistoricalRepoProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalRepoProtocol.swift; sourceTree = "<group>"; };
+		7F7B049B2A25798900CF548C /* HistoricalUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalUseCase.swift; sourceTree = "<group>"; };
+		7F7B049D2A257A7600CF548C /* HistoricalRepoImple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalRepoImple.swift; sourceTree = "<group>"; };
 		7F836E192A20B6C8005AFB91 /* ExtensionUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIView.swift; sourceTree = "<group>"; };
-		7F836E252A214757005AFB91 /* HomeNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNetwork.swift; sourceTree = "<group>"; };
+		7F836E252A214757005AFB91 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		7F836E272A2147FE005AFB91 /* HomeRepoProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepoProtocol.swift; sourceTree = "<group>"; };
 		7F836E2A2A2148F4005AFB91 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7F836E332A21605C005AFB91 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
@@ -137,6 +149,7 @@
 		7F361FAA2A24D41500F5396B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7F7B04922A255DB800CF548C /* HistoricalCell */,
 				7F361FB02A24D45A00F5396B /* HistoricalViewController.swift */,
 				7F361FB12A24D45A00F5396B /* HistoricalViewController.xib */,
 			);
@@ -236,7 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				7F836E332A21605C005AFB91 /* Currency.swift */,
-				7F361FA72A24CA5B00F5396B /* LocalDataModel.swift */,
+				7F361FA72A24CA5B00F5396B /* HistoricalModel.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -245,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				7F146FE42A217BE900A1E5B0 /* HomeUseCase.swift */,
+				7F7B049B2A25798900CF548C /* HistoricalUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -253,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				7F836E272A2147FE005AFB91 /* HomeRepoProtocol.swift */,
+				7F7B04982A2578AC00CF548C /* HistoricalRepoProtocol.swift */,
 			);
 			path = "Repository Interfaces";
 			sourceTree = "<group>";
@@ -269,7 +284,7 @@
 		7F559D192A2033A100D4E2FE /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				7F836E252A214757005AFB91 /* HomeNetwork.swift */,
+				7F836E252A214757005AFB91 /* NetworkService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -278,6 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				7F146FE22A2175CE00A1E5B0 /* HomeRepoImple.swift */,
+				7F7B049D2A257A7600CF548C /* HistoricalRepoImple.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -325,11 +341,21 @@
 			path = "View Model";
 			sourceTree = "<group>";
 		};
+		7F7B04922A255DB800CF548C /* HistoricalCell */ = {
+			isa = PBXGroup;
+			children = (
+				7F7B04932A255DB800CF548C /* HistoricalCell.swift */,
+				7F7B04942A255DB800CF548C /* HistoricalCell.xib */,
+			);
+			path = HistoricalCell;
+			sourceTree = "<group>";
+		};
 		7F836E182A20B636005AFB91 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				7F836E192A20B6C8005AFB91 /* ExtensionUIView.swift */,
 				7FB2CD792A24468D003CF974 /* Error.swift */,
+				7F3827D12A2649EA002B34B6 /* ExtentionArray.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -455,6 +481,7 @@
 			files = (
 				7F559CEF2A202EA300D4E2FE /* LaunchScreen.storyboard in Resources */,
 				7F559CEC2A202EA300D4E2FE /* Assets.xcassets in Resources */,
+				7F7B04962A255DB800CF548C /* HistoricalCell.xib in Resources */,
 				7F361FB52A24D45A00F5396B /* HistoricalViewController.xib in Resources */,
 				7F559D282A2034A000D4E2FE /* HomeViewController.xib in Resources */,
 			);
@@ -484,8 +511,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F836E262A214757005AFB91 /* HomeNetwork.swift in Sources */,
+				7F836E262A214757005AFB91 /* NetworkService.swift in Sources */,
+				7F3827D22A2649EA002B34B6 /* ExtentionArray.swift in Sources */,
+				7F7B049C2A25798900CF548C /* HistoricalUseCase.swift in Sources */,
+				7F7B04952A255DB800CF548C /* HistoricalCell.swift in Sources */,
 				7F559CE32A202EA000D4E2FE /* AppDelegate.swift in Sources */,
+				7F7B04992A2578AC00CF548C /* HistoricalRepoProtocol.swift in Sources */,
 				7F361FB92A24D98900F5396B /* HistoricalViewModel.swift in Sources */,
 				7F836E342A21605C005AFB91 /* Currency.swift in Sources */,
 				7FB2CD7A2A24468D003CF974 /* Error.swift in Sources */,
@@ -495,11 +526,12 @@
 				7F146FE52A217BE900A1E5B0 /* HomeUseCase.swift in Sources */,
 				7F146FE32A2175CE00A1E5B0 /* HomeRepoImple.swift in Sources */,
 				7F559D262A2034A000D4E2FE /* HomeViewController.swift in Sources */,
-				7F361FA82A24CA5B00F5396B /* LocalDataModel.swift in Sources */,
+				7F361FA82A24CA5B00F5396B /* HistoricalModel.swift in Sources */,
 				7F559D2B2A2034C600D4E2FE /* HomeViewModel.swift in Sources */,
 				7F836E1A2A20B6C8005AFB91 /* ExtensionUIView.swift in Sources */,
 				7F836E2B2A2148F4005AFB91 /* Constants.swift in Sources */,
 				7F1ABA862A22AB22002E8510 /* Reachability.swift in Sources */,
+				7F7B049E2A257A7600CF548C /* HistoricalRepoImple.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
