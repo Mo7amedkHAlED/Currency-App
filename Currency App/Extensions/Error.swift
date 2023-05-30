@@ -7,36 +7,48 @@
 
 import Foundation
 
-enum NetworkError: Error {
+enum AppError: Error {
+    case enterAllFields
+    case baseRate
+    case targetRate
+    case currencies
+    case invalidDirectory
+    case dataEncodingFailed
+    case fileNotFound
+    case dataConversionFailed
     case invalidURL
     case noData
     case noInternet
     case generalError
 }
 
-enum GeneralError: Error {
-    case baseRate
-    case targetRate
-    case currencies
-    case enterAllFields
-    case invalidDirectory
-    case dataEncodingFailed
-    case fileNotFound
-    case dataConversionFailed
-
-}
-
-extension NetworkError: LocalizedError {
+extension AppError: LocalizedError {
     var errorDescription: String? {
         switch self {
+        case .noInternet:
+            return "No Internet Connection, Please try again Later!"
+        case .enterAllFields:
+            return "You should fill all required data in order to continue"
         case .invalidURL:
             return "Invalid URL"
         case .noData:
             return "No Data"
-        case .noInternet:
-            return "No Internet"
         case .generalError:
             return "Something went wrong, Please try again!"
+        case .baseRate:
+            return  "baseRate"
+        case .targetRate:
+            return "targetRate"
+        case .currencies:
+            return "currencies"
+        case .invalidDirectory:
+            return "invalidDirectory"
+        case .dataEncodingFailed:
+            return "dataEncodingFailed"
+        case .fileNotFound:
+            return"fileNotFound"
+        case .dataConversionFailed:
+            return"dataConversionFailed"
         }
     }
 }
