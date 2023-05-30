@@ -26,7 +26,7 @@ class HomeRepoImple: HomeRepoProtocol {
         var urlComponents = URLComponents(url: baseUrl, resolvingAgainstBaseURL: true)!
         urlComponents.queryItems = queryItems
         guard let url = urlComponents.url else {
-            return Observable.error(NetworkError.invalidURL)
+            return Observable.error(AppError.invalidURL)
         }
         
         let request = URLRequest(url: url)
@@ -35,7 +35,7 @@ class HomeRepoImple: HomeRepoProtocol {
                 let currenciesRateList = try JSONDecoder().decode(Currency.self, from: data)
                 return Observable.just(currenciesRateList)
             } catch {
-                return Observable.error(NetworkError.generalError)
+                return Observable.error(AppError.noInternet)
             }
         }
     }

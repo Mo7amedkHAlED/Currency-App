@@ -49,11 +49,15 @@ class HomeViewController: UIViewController {
         bindingFromViewModel()
         viewModel.viewDidLoad()
         createTapGesture()
+        detailsButtonSubscribation()
+        showAlertMessage()
     }
-
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         setNavigationController()
+        isConnectedNetwork()
+
     }
     
     private func createTapGesture() {
@@ -128,28 +132,28 @@ class HomeViewController: UIViewController {
         viewModel
             .currencyBehavior.asObservable()
             .bind(to: fromPickerView.rx.itemTitles) { (row, element) in
-            return element
-        }.disposed(by: bag)
-
+                return element
+            }.disposed(by: bag)
+        
         fromPickerView.rx.modelSelected(String.self)
             .map({$0[0]}).subscribe(onNext: { [weak self] selected in
                 guard let self = self else {return }
                 self.viewModel.fromCurrencyBehavior.accept(selected)
-        }).disposed(by: bag)
+            }).disposed(by: bag)
     }
     
     private func configureToPickerViewSubscriber() {
         viewModel
             .currencyBehavior.asObservable()
             .bind(to: toPickerView.rx.itemTitles) { (row, element) in
-            return element
-        }.disposed(by: bag)
-
+                return element
+            }.disposed(by: bag)
+        
         toPickerView.rx.modelSelected(String.self)
             .map({$0[0]}).subscribe(onNext: { [weak self] selected in
                 guard let self = self else {return}
                 self.viewModel.toCurrencyBehavior.accept(selected)
-        }).disposed(by: bag)
+            }).disposed(by: bag)
     }
     
     private func resultButtonSubscribation() {
@@ -158,10 +162,56 @@ class HomeViewController: UIViewController {
             self.viewModel.fetchResult()
         }).disposed(by: bag)
     }
-    //method to show alert
-    private func showAlert(message: String) {
-        let alert = UIAlertController(title: NSLocalizedString("Error", comment:"Error"), message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "OK"), style: .default))
-        present(alert, animated: true)
+    
+    private func detailsButtonSubscribation() {
+        detailsButton.rx.tap.subscribe(onNext: { [weak self] _ in
+            guard let self = self else  { return }
+            let destinationViewController = HistoricalViewController(nibName: "HistoricalViewController", bundle: nil)
+            self.present(destinationViewController, animated: true, completion: nil)
+        }).disposed(by: bag)
     }
+    
+    //method to show alert
+    private func showAlert(error: AppError) {
+        // Display the alert message to the user
+        let alert = UIAlertController(title: "Alert", message: error.localizedDescription, preferredStyle: .alert)
+        // Create the actions
+        let okAction = UIAlertAction(title: "OK", style: .default) { [weak self]
+            UIAlertAction in
+            switch error {
+            case .noInternet:
+                guard let self else { return }
+                self.viewModel.viewDidLoad()
+            default:
+                break
+            }
+
+        }
+        
+        alert.addAction(okAction)
+        present(alert, animated: true, completion: nil)
+    }
+    
+    private func showAlertMessage() {
+        // Subscribe to showAlert subject to handle alerts
+        viewModel.showAlert.asObserver()
+            .subscribe(onNext: {  message in
+                self.showAlert(error: AppError.enterAllFields)
+            })
+            .disposed(by: bag)
+    }
+    
+    private func isConnectedNetwork() {
+        viewModel.isConnected
+            .subscribe(onNext: {  cases in
+                switch cases {
+                case true :
+                    self.showAlert(error: AppError.noInternet)
+                case false:
+                    break
+                }
+            })
+            .disposed(by: bag)
+    }
+    
 }
