@@ -20,6 +20,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var detailsButton: UIButton!
     @IBOutlet weak var resultView: UIView!
     @IBOutlet weak var resultButton: UIButton!
+    @IBOutlet weak var popularRatesButton: UIButton!
+    
     // MARK: - Variables
     private let fromPickerView = UIPickerView()
     private let toPickerView = UIPickerView()
@@ -51,6 +53,7 @@ class HomeViewController: UIViewController {
         createTapGesture()
         detailsButtonSubscription()
         showAlertMessage()
+        seePopularCurrenciesButtonSubscription()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -165,6 +168,20 @@ class HomeViewController: UIViewController {
             guard let self = self else  { return }
             let destinationViewController = HistoricalViewController(nibName: "HistoricalViewController", bundle: nil)
             self.present(destinationViewController, animated: true, completion: nil)
+        }).disposed(by: bag)
+    }
+    
+    private func seePopularCurrenciesButtonSubscription() {
+        popularRatesButton.rx.tap.subscribe(onNext: { [weak self] _ in
+            guard let self = self else  { return }
+            let vc = PopularCurrenciesViewController(nibName: "PopularCurrenciesViewController", bundle: nil)
+            vc.viewModel.currencies = self.viewModel.currencies
+            if self.viewModel.fromCurrencyBehavior.value == "" {
+                self.showAlert(error: AppError.fromTXIsEmpty)
+                return
+            }
+            vc.viewModel.baseCurrency = self.viewModel.fromCurrencyBehavior.value
+            self.present(vc, animated: true, completion: nil)
         }).disposed(by: bag)
     }
     
