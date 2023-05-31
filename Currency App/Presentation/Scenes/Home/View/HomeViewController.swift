@@ -45,11 +45,11 @@ class HomeViewController: UIViewController {
         pickerCurrencySymbols()
         configureFromPickerViewSubscriber()
         configureToPickerViewSubscriber()
-        resultButtonSubscribation()
+        resultButtonSubscription()
         bindingFromViewModel()
         viewModel.viewDidLoad()
         createTapGesture()
-        detailsButtonSubscribation()
+        detailsButtonSubscription()
         showAlertMessage()
     }
     
@@ -57,7 +57,6 @@ class HomeViewController: UIViewController {
         super.viewDidAppear(animated)
         setNavigationController()
         isConnectedNetwork()
-
     }
     
     private func createTapGesture() {
@@ -72,7 +71,6 @@ class HomeViewController: UIViewController {
     
     private func setNavigationController(){
         navigationController?.navigationBar.isHidden = true
-        resultView.isHidden = true
     }
     
     private func pickerCurrencySymbols(){
@@ -123,7 +121,6 @@ class HomeViewController: UIViewController {
             .subscribe(onNext: { [weak self] currency in
                 guard let self = self else { return }
                 self.resultLabel.text = String(currency)
-                self.resultView.isHidden = false
                 print("Result is \(currency)")
             }).disposed(by: bag)
     }
@@ -156,14 +153,14 @@ class HomeViewController: UIViewController {
             }).disposed(by: bag)
     }
     
-    private func resultButtonSubscribation() {
+    private func resultButtonSubscription() {
         resultButton.rx.tap.subscribe(onNext: { [weak self] _ in
             guard let self = self else  { return }
             self.viewModel.fetchResult()
         }).disposed(by: bag)
     }
     
-    private func detailsButtonSubscribation() {
+    private func detailsButtonSubscription() {
         detailsButton.rx.tap.subscribe(onNext: { [weak self] _ in
             guard let self = self else  { return }
             let destinationViewController = HistoricalViewController(nibName: "HistoricalViewController", bundle: nil)
@@ -213,5 +210,4 @@ class HomeViewController: UIViewController {
             })
             .disposed(by: bag)
     }
-    
 }

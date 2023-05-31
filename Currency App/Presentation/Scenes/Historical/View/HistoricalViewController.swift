@@ -21,7 +21,7 @@ class HistoricalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureNibFileTableView()
-        tableViewSubscribation()
+        tableViewSubscription()
         viewModel.viewDidLoad()
 
     }
@@ -31,7 +31,7 @@ class HistoricalViewController: UIViewController {
         forCellReuseIdentifier: String(describing: HistoricalCell.self))
     }
     
-    private func tableViewSubscribation() {
+    private func tableViewSubscription() {
         viewModel.historicalPublisher.bind(to: historicalTableView.rx.items(cellIdentifier: String(describing: HistoricalCell.self), cellType: HistoricalCell.self)) { (_ , element , cell ) in
             print(element)
             cell.setCellCurrency(currency: element)
