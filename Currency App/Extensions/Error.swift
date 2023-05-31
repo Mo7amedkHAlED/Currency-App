@@ -20,6 +20,7 @@ enum AppError: Error {
     case noData
     case noInternet
     case generalError
+    case fromTXIsEmpty
 }
 
 extension AppError: LocalizedError {
@@ -49,6 +50,8 @@ extension AppError: LocalizedError {
             return"fileNotFound"
         case .dataConversionFailed:
             return"dataConversionFailed"
+        case .fromTXIsEmpty:
+            return"You should choose base currency"
         }
     }
 }
