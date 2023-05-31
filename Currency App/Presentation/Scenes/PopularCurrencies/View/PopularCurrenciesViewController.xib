@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PopularCurrenciesViewController" customModule="Currency_App" customModuleProvider="target">
+            <connections>
+                <outlet property="baseCurrencyLabel" destination="Ut2-oS-VXh" id="cxB-Im-3h5"/>
+                <outlet property="popularCurrenciesTableView" destination="jDP-JG-ONr" id="5Lw-ks-etQ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Popular Rates" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5d-Q8-Wcs">
+                    <rect key="frame" x="134.33333333333331" y="79" width="161.33333333333331" height="30"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Base Currency" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ut2-oS-VXh">
+                    <rect key="frame" x="146" y="133" width="138" height="24"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jDP-JG-ONr">
+                    <rect key="frame" x="0.0" y="181" width="430" height="717"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.43936011899999999" green="0.69001131699999996" blue="0.66699586079999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="jDP-JG-ONr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="2IQ-7d-yMC"/>
+                <constraint firstItem="G5d-Q8-Wcs" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="8RC-Lj-JWa"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="jDP-JG-ONr" secondAttribute="bottom" id="G7q-o7-szl"/>
+                <constraint firstItem="Ut2-oS-VXh" firstAttribute="top" secondItem="G5d-Q8-Wcs" secondAttribute="bottom" constant="24" id="Gbv-rg-dRq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jDP-JG-ONr" secondAttribute="trailing" id="TnX-WX-XHw"/>
+                <constraint firstItem="G5d-Q8-Wcs" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="V62-xv-12d"/>
+                <constraint firstItem="Ut2-oS-VXh" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="VVY-K7-ypH"/>
+                <constraint firstItem="jDP-JG-ONr" firstAttribute="top" secondItem="Ut2-oS-VXh" secondAttribute="bottom" constant="24" id="bG8-Wh-rHn"/>
+            </constraints>
+            <point key="canvasLocation" x="138" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
